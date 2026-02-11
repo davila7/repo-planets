@@ -1,11 +1,18 @@
 # Repo Planets
 
-Transform any GitHub user's repositories into an interactive **3D solar system**. Each repo becomes a planet — its size, color, and orbit reveal its story at a glance.
+> **Built with the [3D Web Experience](https://www.aitmpl.com/component/skill/3d-web-experience) skill from [Claude Code Templates](https://www.aitmpl.com)**
+>
+> ```bash
+> npx claude-code-templates@latest --skill=creative-design/3d-web-experience --yes
+> ```
 
+[![Built with Claude Code Templates](https://img.shields.io/badge/Built%20with-Claude%20Code%20Templates-7c3aed?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0wIDE4Yy00LjQyIDAtOC0zLjU4LTgtOHMzLjU4LTggOC04IDggMy41OCA4IDgtMy41OCA4LTggOHoiLz48L3N2Zz4=)](https://www.aitmpl.com/component/skill/3d-web-experience)
 ![React](https://img.shields.io/badge/React-18-61dafb?logo=react&logoColor=white)
 ![Three.js](https://img.shields.io/badge/Three.js-r161-black?logo=threedotjs&logoColor=white)
 ![React Three Fiber](https://img.shields.io/badge/R3F-8.15-orange)
 ![Vite](https://img.shields.io/badge/Vite-5-646cff?logo=vite&logoColor=white)
+
+Transform any GitHub user's repositories into an interactive **3D solar system**. Each repo becomes a planet — its size, color, and orbit reveal its story at a glance.
 
 ---
 
@@ -93,19 +100,13 @@ This project uses the **unauthenticated** GitHub API, which allows **60 requests
 
 ---
 
-## Built with Claude Code Templates
+## About the Skill
 
-This project was generated using the **3D Web Experience** skill from [Claude Code Templates](https://www.aitmpl.com):
-
-```bash
-npx claude-code-templates@latest --skill=creative-design/3d-web-experience --yes
-```
-
-The [3D Web Experience](https://www.aitmpl.com/component/skill/3d-web-experience) skill is a specialized Claude Code skill that acts as a **3D Web Experience Architect** — expert in Three.js, React Three Fiber, Spline, WebGL, and interactive 3D scenes. It provides patterns for stack selection, model pipelines, scroll-driven 3D, and performance optimization.
+This entire project was generated using the **[3D Web Experience](https://www.aitmpl.com/component/skill/3d-web-experience)** skill — a specialized [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill that acts as a **3D Web Experience Architect**. It brings expertise in Three.js, React Three Fiber, Spline, WebGL, interactive 3D scenes, performance optimization, and model pipelines.
 
 ### What are Claude Code Skills?
 
-Skills are pre-built configurations that give Claude Code domain expertise. They live in `.claude/skills/` and activate automatically when relevant. Install any skill with:
+Skills are pre-built configurations that give Claude Code domain expertise. They live in `.claude/skills/` and activate automatically when relevant tasks are detected. Install any skill with:
 
 ```bash
 npx claude-code-templates@latest --skill=<category>/<skill-name> --yes
