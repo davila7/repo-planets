@@ -1,9 +1,25 @@
 import { getLanguageColor } from '../services/languageColors'
 
+const PLANET_TYPE_LABELS = {
+  gas: 'Gas giant',
+  rocky: 'Rocky world',
+  ice: 'Ice world',
+  lava: 'Lava world',
+  dead: 'Dead world',
+}
+
+function activityLabel(activity) {
+  if (activity >= 0.9) return { text: 'active', color: '#4ade80' }
+  if (activity >= 0.5) return { text: 'recent', color: '#facc15' }
+  if (activity > 0.2) return { text: 'quiet', color: '#fb923c' }
+  return { text: 'dormant', color: '#94a3b8' }
+}
+
 export default function Tooltip({ data, position }) {
   if (!data || !position) return null
 
   const langColor = getLanguageColor(data.language)
+  const activity = activityLabel(data.activity)
 
   return (
     <div
@@ -35,6 +51,16 @@ export default function Tooltip({ data, position }) {
           </span>
           <span className="stat" style={{ color: langColor }}>
             {data.language}
+          </span>
+        </div>
+        <div className="planet-facts">
+          <span className="fact">{PLANET_TYPE_LABELS[data.planetType] || 'World'}</span>
+          {data.moons > 0 && (
+            <span className="fact">{data.moons} moon{data.moons > 1 ? 's' : ''}</span>
+          )}
+          {data.hasRings && <span className="fact">ringed</span>}
+          <span className="fact" style={{ color: activity.color }}>
+            ● {data.archived ? 'archived' : activity.text}
           </span>
         </div>
       </div>
